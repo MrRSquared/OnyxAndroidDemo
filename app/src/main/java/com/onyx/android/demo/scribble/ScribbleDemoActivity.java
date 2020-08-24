@@ -56,6 +56,11 @@ public class ScribbleDemoActivity extends AppCompatActivity {
         go(ScribbleSavePointsDemoActivity.class);
     }
 
+    @OnClick(R.id.button_gradeBook)
+    public void button_gradebook() {
+        go(GradeBookActivity.class);
+    }
+
     private void go(Class<?> activityClass) {
         startActivity(new Intent(this, activityClass));
     }
