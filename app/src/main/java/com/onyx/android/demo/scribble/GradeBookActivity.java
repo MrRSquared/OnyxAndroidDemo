@@ -130,6 +130,13 @@ public class GradeBookActivity extends AppCompatActivity {
             Rect limit = new Rect();
             surfaceView.getGlobalVisibleRect(limit);
             limitRectList.add(limit);
+            bkGroundBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.scribble_back_ground_grid);
+            renderBitmap = Bitmap.createBitmap(surfaceView.getWidth(),
+                    surfaceView.getHeight(),
+                    Bitmap.Config.ARGB_8888);
+            renderBitmap.eraseColor(Color.TRANSPARENT);
+            canvas = new Canvas(renderBitmap);
+            drawBitmap();
             onSurfaceCreated(limitRectList);
         }
 
@@ -144,7 +151,7 @@ public class GradeBookActivity extends AppCompatActivity {
 
             };
 
-        surfaceView1.getHolder().addCallback(surfaceCallback);
+        surfaceView.getHolder().addCallback(surfaceCallback);
     }
 
     private void onSurfaceCreated(List<Rect> limitRectList) {
