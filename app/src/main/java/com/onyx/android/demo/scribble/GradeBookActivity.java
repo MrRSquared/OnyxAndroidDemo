@@ -51,6 +51,7 @@ public class GradeBookActivity extends AppCompatActivity {
 
     private List<TouchPoint> points = new ArrayList<>();
     private SurfaceHolder.Callback surfaceCallback;
+    private SurfaceView surfaceView ;
     private Bitmap renderBitmap;
     private Bitmap bkGroundBitmap;
     private Canvas canvas;
@@ -137,6 +138,9 @@ public class GradeBookActivity extends AppCompatActivity {
             renderBitmap.eraseColor(Color.TRANSPARENT);
             canvas = new Canvas(renderBitmap);
             drawBitmap();
+            touchHelper.setLimitRect(limit, new ArrayList<Rect>())
+                    .setStrokeWidth(renderStrokeWidth)
+                    .openRawDrawing();
             onSurfaceCreated(limitRectList);
         }
 
@@ -159,6 +163,7 @@ public class GradeBookActivity extends AppCompatActivity {
             return;
         }
         touchHelper.setLimitRect(limitRectList, new ArrayList<Rect>())
+                .setStrokeWidth(renderStrokeWidth)
                 .openRawDrawing();
     }
 

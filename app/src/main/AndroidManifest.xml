@@ -42,7 +42,8 @@
         <activity android:name=".OpenKcbActivity" />
         <activity android:name=".OTADemoActivity" />
         <activity android:name=".DictionaryActivity" />
-        <activity android:name=".note.NoteDemoActivity" />
+        <activity android:name=".note.NoteDemoActivity"/>
+
         <activity android:name=".DateTimeDemoActivity" />
         <activity android:name=".scribble.GradeBookActivity"/>
     </application>
