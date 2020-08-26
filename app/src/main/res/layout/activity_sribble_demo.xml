@@ -58,4 +58,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="My Gradebook"/>
+    <Button
+        android:id="@+id/button_recycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Recycler"/>
 </LinearLayout>

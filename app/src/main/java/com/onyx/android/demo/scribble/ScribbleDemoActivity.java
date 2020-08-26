@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.AbsListView;
 
 import com.onyx.android.demo.R;
 
@@ -59,6 +60,10 @@ public class ScribbleDemoActivity extends AppCompatActivity {
     @OnClick(R.id.button_gradeBook)
     public void button_gradebook() {
         go(GradeBookActivity.class);
+    }
+    @OnClick(R.id.button_recycler)
+    public void button_recycler() {
+        go(Recycler.class);
     }
 
     private void go(Class<?> activityClass) {
